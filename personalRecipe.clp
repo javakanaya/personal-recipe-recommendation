@@ -38,6 +38,61 @@
     ))
 )
 
+(defrule VeganRecipies
+    (Recipe
+        (name ?name)
+        (ingredients ?ingredients)
+    )
+    (test (eq (str-index "chicken" ?ingredients) FALSE))
+    (test (eq (str-index "beef" ?ingredients) FALSE))
+    (test (eq (str-index "meat" ?ingredients) FALSE))
+    (test (eq (str-index "fish" ?ingredients) FALSE))
+    (test (eq (str-index "yogurt" ?ingredients) FALSE))
+    (test (eq (str-index "eggs" ?ingredients) FALSE))
+    (test (eq (str-index "pork" ?ingredients) FALSE))
+    =>
+    (printout t "Vegan Recipe: " ?name crlf)
+)
+
+(defrule RecommendRecipeByCuisine
+    (User 
+        (cuisine-preference ?cuisine-pref)
+    )
+    (Recipe 
+        (name ?recipe)
+        (cuisine ?cuisine)
+    )
+    (test (eq ?cuisine ?cuisine-pref))
+    =>
+    (printout t ?cuisine " cuisine: " ?recipe crlf)
+)
+
+(defrule RecommendRecipeByDifficulty
+    (User 
+        (difficulty-preference ?difficulty-pref)
+    )
+    (Recipe 
+        (name ?recipe)
+        (difficulty ?difficulty)
+    )
+    (test (eq ?difficulty ?difficulty-pref))
+    =>
+    (printout t ?difficulty " Recipe: " ?recipe crlf)
+)
+
+(defrule RecommendRecipeByIngredient
+    (User 
+        (name ?name)
+        (ingredient-preference ?ingredient-pref)
+    )
+    (Recipe 
+        (name ?recipe)
+        (ingredients ?ingredients)
+    )
+    (test (neq (str-index ?ingredient-pref ?ingredients) FALSE))
+    =>
+    (printout t "This recipe use " ?ingredient-pref ": " ?recipe crlf)
+)
 
 (defrule RecommendRecipe
     (User 
