@@ -97,4 +97,36 @@
         (ingredients "romaine lettuce, croutons, Caesar dressing") 
         (instructions "1. Toss lettuce with dressing. 2. Add croutons.")
     )
+
+    (Recipe 
+        (name "Sushi Rolls") 
+        (cuisine Japanese) 
+        (difficulty Intermediate)
+        (ingredients "sushi rice, nori seaweed, fish, vegetables") 
+        (instructions "1. Prepare sushi rice. 2. Lay out nori seaweed. 3. Add fillings and roll.")
+    )
+
+    (Recipe 
+        (name "Mediterranean Quinoa Salad") 
+        (cuisine Mediterranean) 
+        (difficulty Easy)
+        (ingredients "quinoa, cucumber, tomatoes, olives, feta cheese") 
+        (instructions "1. Cook quinoa. 2. Dice vegetables. 3. Mix with quinoa and feta cheese.")
+    )
+
+    (Recipe 
+        (name "Beef Stir-Fry") 
+        (cuisine Chinese) 
+        (difficulty Intermediate)
+        (ingredients "beef, broccoli, bell peppers, soy sauce") 
+        (instructions "1. Slice beef. 2. Stir-fry with vegetables and soy sauce.")
+    )
+
+    (Recipe 
+        (name "Classic Margherita Pizza") 
+        (cuisine Italian) 
+        (difficulty Easy)
+        (ingredients "pizza dough, tomatoes, fresh mozzarella, basil") 
+        (instructions "1. Roll out pizza dough. 2. Add tomatoes, mozzarella, and basil. 3. Bake.")
+    )
 )
